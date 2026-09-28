@@ -1,0 +1,30 @@
+===public fact_sales
+let
+    Source = PostgreSQL.Database("localhost", "ecommerce_project"),
+    public_fact_sales = Source{[Schema="public",Item="fact_sales"]}[Data]
+in
+    public_fact_sales
+
+
+===public dim_customers
+let
+    Source = PostgreSQL.Database("localhost", "ecommerce_project"),
+    public_dim_customers = Source{[Schema="public",Item="dim_customers"]}[Data]
+in
+    public_dim_customers
+
+
+===public dim_products
+let
+    Source = PostgreSQL.Database("localhost", "ecommerce_project"),
+    public_dim_products = Source{[Schema="public",Item="dim_products"]}[Data]
+in
+    public_dim_products
+
+
+===public order_items_clean
+let
+    Source = PostgreSQL.Database("localhost", "ecommerce_project"),
+    public_order_items_clean = Source{[Schema="public",Item="order_items_clean"]}[Data]
+in
+    public_order_items_clean
